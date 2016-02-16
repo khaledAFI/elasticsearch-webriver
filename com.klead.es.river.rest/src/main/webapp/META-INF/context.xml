@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource maxIdle="10" testOnBorrow="true"
+              connectionProperties="" driverClassName="com.mysql.jdbc.Driver"
+              validationQuery="/* ping */ select 1" type="javax.sql.DataSource"
+              password="root" url="jdbc:mysql://localhost:3306/virageFO" maxActive="100"
+              username="root" name="jdbc/precalculsDataSource"
+              minIdle="2" maxWait="10000" timeBetweenEvictionRunsMillis="10000"
+              initialSize="1" auth="Container" />
+
+</Context>

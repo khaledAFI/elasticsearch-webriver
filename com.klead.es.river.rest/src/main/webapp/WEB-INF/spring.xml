@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="
+                            http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://cxf.apache.org/jaxrs
+                            http://cxf.apache.org/schemas/jaxrs.xsd
+                            http://www.springframework.org/schema/util
+                            http://www.springframework.org/schema/util/spring-util.xsd
+                            http://www.springframework.org/schema/jee
+                            http://www.springframework.org/schema/jee/spring-jee.xsd">
+
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+
+    <jaxrs:server id="ws" address="/river">
+        <jaxrs:serviceBeans>
+            <ref bean="river"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean id="jacksonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+
+    <bean id="river" class="com.klead.es.river.rest.RiverRest">
+        <property name="river" ref="mysqlRiver"/>
+    </bean>
+
+    <bean id="mysqlRiver" class="com.klead.es.river.impl.MysqlRiver">
+        <property name="taskExecutor" ref="taskExecutor"/>
+        <property name="workerFactory" ref="workerFactory"/>
+        <property name="preconditionHandler" ref="preconditionHandler"/>
+        <property name="sqlDataCounter" ref="sqlDataCounter"/>
+        <property name="workReport" ref="workReport"/>
+        <property name="sqlDataReader" ref="sqlDataReader"/>
+    </bean>
+
+    <bean id="preconditionHandler" class="com.klead.es.river.impl.PreconditionHandler">
+        <property name="esAdminService" ref="esAdminService"/>
+        <property name="indexTypeMapping" ref="indexTypeMapping"/>
+    </bean>
+
+    <bean id="mysqlWorker" class="com.klead.es.river.impl.MysqlWorker" scope="prototype">
+        <property name="documentToJsonMapper" ref="documentToJsonMapper"/>
+        <property name="documentBulkIndexer" ref="documentBulkIndexer"/>
+    </bean>
+
+    <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="500"/>
+        <property name="maxPoolSize" value="1000"/>
+        <property name="queueCapacity" value="500"/>
+    </bean>
+
+    <bean id="sqlDataReader" class="com.klead.es.river.data.reading.SqlDataReader">
+        <property name="sqlQuery" ref="sqlQuery"/>
+        <property name="namedParameterJdbcTemplate" ref="namedParameterJdbcTemplate"/>
+    </bean>
+
+    <bean id="sqlDataCounter" class="com.klead.es.river.data.reading.SqlDataCounter">
+        <property name="dataCountQuery" ref="dataCountQuery"/>
+        <property name="namedParameterJdbcTemplate" ref="namedParameterJdbcTemplate"/>
+    </bean>
+
+
+    <bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+        <constructor-arg name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="documentToJsonMapper" class="com.klead.es.river.data.mapping.DocumentToJsonMapper"/>
+
+    <bean id="documentBulkIndexer" class="com.klead.es.river.data.indexing.DocumentBulkIndexer">
+        <property name="esClusterClient" ref="esClusterClient"/>
+    </bean>
+
+    <bean id="esClusterClient" class="com.klead.es.common.EsClusterClient" init-method="init" destroy-method="destroy">
+        <property name="elasticSearchNodesPorts" ref="elasticSearchNodesPorts"/>
+        <property name="elasticsearchClusterName" value="my_cluster"/>
+    </bean>
+
+    <util:map id="elasticSearchNodesPorts" map-class="java.util.HashMap">
+        <entry value="10.12.0.111" key="9301"/>
+        <entry value="10.12.0.111" key="9302"/>
+        <entry value="10.12.0.111" key="9303"/>
+    </util:map>
+
+    <bean id="esAdminService" class="com.klead.es.common.EsAdminService">
+        <property name="esClusterClient" ref="esClusterClient"/>
+    </bean>
+
+
+    <bean id="sqlQuery" class="org.apache.commons.io.IOUtils" factory-method="toString">
+        <constructor-arg type="java.io.InputStream" value="classpath:sqlQuery.sql"/>
+    </bean>
+    <bean id="dataCountQuery" class="org.apache.commons.io.IOUtils" factory-method="toString">
+        <constructor-arg type="java.io.InputStream" value="classpath:dataCountQuery.sql"/>
+    </bean>
+
+    <bean id="indexTypeMapping" class="org.apache.commons.io.IOUtils" factory-method="toString">
+        <constructor-arg type="java.io.InputStream" value="classpath:schema.json"/>
+    </bean>
+
+
+    <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/precalculsDataSource"
+                     expected-type="javax.sql.DataSource"/>
+
+    <bean id="workReport" class="com.klead.es.river.WorkReport">
+    </bean>
+
+    <bean class="com.klead.es.river.impl.WorkerFactory" id="workerFactory">
+    </bean>
+
+
+    <bean id="contextApplicationContextProvider" class="com.klead.es.common.ApplicationContextProvider"></bean>
+
+</beans>

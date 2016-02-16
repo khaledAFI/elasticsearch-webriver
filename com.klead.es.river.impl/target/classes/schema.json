@@ -1,0 +1,26 @@
+{
+  "package_sejour": {
+    "_timestamp" : {"enabled" : true, "store" : "yes", "index" : "not_analyzed"},
+    "_routing" : {"required" : true},
+    "_all" : {"enabled" : false},
+    "dynamic": "strict",
+
+    "properties" : {
+      "id" : {"type" : "long"},
+      "idLogement" : {"type" : "long"},
+      "dureeJours" : {"type" : "integer"},
+      "dureeNuits" : {"type" : "integer"},
+      "villeDepart" : {"type" : "string"},
+      "pension" : {"type" : "string"},
+      "prix" : {"type" : "long"},
+      "prix_j30" : {"type" : "long"},
+      "offreCompleteId" : {"type" : "long"},
+      "dispo" : {"type" : "integer"},
+      "ridTourOperateur" : {"type" : "integer"},
+      "dateCreation" : {"format": "YYYY-MM-dd", "type": "date"},
+      "dateMAJ" : {"format": "YYYY-MM-dd", "type": "date"},
+      "coupDeCoeur" : {"type" : "boolean"},
+      "stopAffaire" : {"type" : "boolean"}
+    }
+  }
+}

@@ -1,0 +1,15 @@
+com\klead\es\river\data\mapping\DocumentToJsonMapper.class
+com\klead\es\river\data\reading\SqlDataReader$1.class
+com\klead\es\river\impl\WorkerFactory.class
+com\klead\es\river\data\reading\SqlDataReader.class
+com\klead\es\river\data\indexing\DocumentBulkIndexer.class
+com\klead\es\river\data\reading\SqlDataCounter.class
+com\klead\es\common\EsClusterClient.class
+com\klead\es\common\EsAdminService.class
+com\klead\es\river\impl\MysqlWorker.class
+com\klead\es\river\impl\Settings.class
+com\klead\es\river\data\Package.class
+com\klead\es\river\impl\PreconditionHandler.class
+com\klead\es\river\impl\MysqlRiver.class
+com\klead\es\common\ApplicationContextProvider.class
+com\klead\es\common\AppContext.class

@@ -1,0 +1,10 @@
+package com.klead.es.river;
+
+/**
+ * Created by kafi on 11/02/2016.
+ */
+public enum ResultCode {
+    INDEXATION_SUCCESS, INDEXATION_ALREADY_RUNNING, CLUSTER_HEALTH_ERROR, INDEX_HEALTH_ERROR, OLD_INDEX_DELETE_ERROR, INDEX_CREATION_ERROR;
+
+
+}
