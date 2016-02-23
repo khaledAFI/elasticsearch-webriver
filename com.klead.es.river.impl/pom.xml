@@ -28,6 +28,11 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
         </dependency>
         <dependency>
@@ -86,6 +91,12 @@
             <artifactId>aspectjrt</artifactId>
             <version>${aspectjrt.version}</version>
         </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>${javax.mail.version}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>junit</groupId>
@@ -102,6 +113,7 @@
         <hibernate-validator.version>5.2.3.Final</hibernate-validator.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <aspectjrt.version>1.8.4</aspectjrt.version>
+        <javax.mail.version>1.4.7</javax.mail.version>
     </properties>
 
 </project>

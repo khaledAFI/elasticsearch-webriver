@@ -4,12 +4,13 @@ C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\j
 C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\common\EsAdminService.java
 C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\common\AppContext.java
 C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\river\data\mapping\DocumentToJsonMapper.java
+C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\common\RiverMailer.java
 C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\river\aspect\ReportingAspect.java
 C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\river\handler\impl\PreconditionHandler.java
 C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\common\EsClusterClient.java
 C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\common\ApplicationContextProvider.java
-C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\river\factory\TaskExecutorFactory.java
 C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\river\data\Package.java
+C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\river\factory\TaskExecutorFactory.java
 C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\river\MysqlRiver.java
 C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\river\handler\ICommandValidationHandler.java
 C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\java\com\klead\es\river\handler\impl\CommandValidationHandler.java

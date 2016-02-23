@@ -13,7 +13,10 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
+ *
+ * Lock Strategy base on index name : this means that for a given index only one indexation command can be processed
  * Created by kafi on 23/02/2016.
+ *
  */
 @Component("indexLockStrategy")
 public class IndexLockStrategy implements LockStrategy {
@@ -36,8 +39,10 @@ public class IndexLockStrategy implements LockStrategy {
 
     @Override
     public void tryUnlock(IndexationCommand command){
-        Lock lock = getLock(command);
-        lock.unlock();
+        Lock l = mLocks.get(command.getIndexName());
+        if (l !=  null){
+            l.unlock();
+        }
     }
 
     private Lock getLock(IndexationCommand command) {
@@ -48,4 +53,6 @@ public class IndexLockStrategy implements LockStrategy {
         }
         return l;
     }
+
+
 }

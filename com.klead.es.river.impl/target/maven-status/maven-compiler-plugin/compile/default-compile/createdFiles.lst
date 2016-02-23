@@ -13,6 +13,7 @@ com\klead\es\river\strategy\impl\IndexLockStrategy.class
 com\klead\es\river\exception\TechnicalException.class
 com\klead\es\river\aspect\ReportingAspect.class
 com\klead\es\river\Settings.class
+com\klead\es\common\RiverMailer.class
 com\klead\es\river\data\reading\SqlDataReader.class
 com\klead\es\river\strategy\LockStrategy.class
 com\klead\es\river\handler\impl\PreconditionHandler.class

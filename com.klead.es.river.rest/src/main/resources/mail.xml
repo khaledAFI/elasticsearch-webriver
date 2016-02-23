@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="riverMailer" class="com.klead.es.common.RiverMailer">
+        <property name="mailSender" ref="mailSender"/>
+        <property name="preConfiguredSuccessMessage" ref="preConfiguredSuccessMessage"/>
+        <property name="preConfiguredFailMessage" ref="preConfiguredFailMessage"/>
+    </bean>
+
+    <!-- SET default mail properties -->
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.gmail.com"/>
+        <property name="port" value="587"/>
+        <property name="username" value="afi.karavel@gmail.com"/>
+        <property name="password" value="karaveltest"/>
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.debug">false</prop>
+            </props>
+        </property>
+    </bean>
+
+
+    <bean id="preConfiguredSuccessMessage" class="org.springframework.mail.SimpleMailMessage">
+        <property name="to" value="kafi@karavel.com"></property>
+        <property name="from" value="river@gmail.com"></property>
+        <property name="subject" value="SUCCESS -Indexing Process FINISHED !!"/>
+    </bean>
+
+    <bean id="preConfiguredFailMessage" class="org.springframework.mail.SimpleMailMessage">
+        <property name="to" value="kafi@karavel.com"></property>
+        <property name="from" value="river@gmail.com"></property>
+        <property name="subject" value="FAILURE - Indexing Process ERROR !!"/>
+    </bean>
+
+</beans>

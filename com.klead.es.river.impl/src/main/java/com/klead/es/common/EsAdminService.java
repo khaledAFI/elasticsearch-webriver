@@ -1,5 +1,6 @@
 package com.klead.es.common;
 
+import com.klead.es.river.EsReport;
 import com.klead.es.river.Settings;
 import com.klead.es.river.exception.TechnicalException;
 import org.apache.log4j.Logger;
@@ -19,13 +20,10 @@ import org.elasticsearch.client.IndicesAdminClient;
 import org.elasticsearch.client.Requests;
 import org.elasticsearch.common.Priority;
 import org.elasticsearch.common.settings.ImmutableSettings;
-import org.elasticsearch.common.unit.TimeValue;
-import org.elasticsearch.index.indexing.IndexingStats;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -209,7 +207,7 @@ public class EsAdminService {
         return actionGet.getStatus();
     }
 
-    public Hashtable<String, Object> indexStats(String indexName) throws Exception {
+    public EsReport indexStatistics(String indexName) throws Exception {
         IndicesStatsResponse res = esClusterClient.getClient()
                 .admin()
                 .indices()
@@ -217,31 +215,14 @@ public class EsAdminService {
                 .all()
                 .execute()
                 .actionGet(ES_SERVER_CONNECTION_TIMEOUT, TimeUnit.SECONDS);
-        IndexingStats indexing = res.getTotal().getIndexing();
-        long indexCount = indexing.getTotal().getIndexCount();
-        TimeValue indexTime = indexing.getTotal().getIndexTime();
-        double debitSecond = indexCount / (indexTime.getSeconds() == 0 ? 0.0001 : indexTime.getSeconds());
-        if (LOGGER.isInfoEnabled()) {
-            LOGGER.info("====================================== total indexed docs: " + indexCount);
-            LOGGER.info("====================================== indexation time  in seconde: " + indexTime.getSeconds());
-            LOGGER.info("====================================== indexation time  in minute: " + indexTime.getMinutes());
-            LOGGER.info("====================================== debit docs/s  " + debitSecond);
-        }
-        Hashtable<String, Object> meticsInfos = new Hashtable<String, Object>();
-        meticsInfos.put("totalIndexedDocs", indexCount);
-        meticsInfos.put("indexationTimeSecond", indexTime.getSeconds());
-        meticsInfos.put("throuputDocsPerSecond", debitSecond);
-        return meticsInfos;
-    }
-
-    public EsClusterClient getEsClusterClient() {
-        return esClusterClient;
+        EsReport esReport = new EsReport();
+        esReport.setIndexationExecutionTime(res.getTotal().getIndexing().getTotal().getIndexTime().getMillis());
+        esReport.setIndexEntryCount(res.getTotal().getIndexing().getTotal().getIndexCount());
+        return esReport;
     }
 
     public void setEsClusterClient(EsClusterClient esClusterClient) {
         this.esClusterClient = esClusterClient;
     }
-
-
 }
 

@@ -12,8 +12,9 @@ public class IndexationResult implements Serializable {
     private Long totalSuccessDocsCount;
     private Long totalFailureDocsCount;
     private String resultCode;
-    private WorkReport workReport;
     private Long totalExecutionTime;
+    private WorkReport workReport;
+    private EsReport esReport;
 
     public Long getTotalExecutionTime() {
         return totalExecutionTime;
@@ -70,5 +71,13 @@ public class IndexationResult implements Serializable {
 
     public void setWorkReport(WorkReport workReport) {
         this.workReport = workReport;
+    }
+
+    public void setEsReport(EsReport esReport) {
+        this.esReport = esReport;
+    }
+
+    public EsReport getEsReport() {
+        return esReport;
     }
 }

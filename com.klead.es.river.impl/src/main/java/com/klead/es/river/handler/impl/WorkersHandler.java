@@ -75,7 +75,7 @@ public class WorkersHandler  implements IWorkersHandler {
             taskExecutor.getThreadPoolExecutor().awaitTermination(TERMINATION_AWAIT_TIMEOUT, TimeUnit.SECONDS);
 
             indexationResult.setResultCode(ResultCode.INDEXATION_SUCCESS.name());
-            LOGGER.info("INDEXATION STATUS : SUCCESS");
+            LOGGER.debug("INDEXATION STATUS : SUCCESS");
         } catch (Exception e) {
             LOGGER.error("INDEXATION STATUS : FAILED", e);
         }

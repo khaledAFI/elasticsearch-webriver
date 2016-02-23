@@ -45,10 +45,13 @@ public class FullIndexationStrategy implements IndexationStrategy {
         try {
             // check Lock
             if (indexLockStrategy.tryLock(command, Long.valueOf(tryLockAcquiringTimeout))) {
-                preconditionHandler.checkPreconditions(command);
-                // Run indexing Workers
-                indexationResult = workersHandler.runWorkers(command);
-                indexLockStrategy.tryUnlock(command);
+                try {
+                    preconditionHandler.checkPreconditions(command);
+                    // Run indexing Workers
+                    indexationResult = workersHandler.runWorkers(command);
+                }finally {
+                    indexLockStrategy.tryUnlock(command);
+                }
             } else {
                 indexationResult.setResultCode(ResultCode.INDEXATION_ALREADY_RUNNING.name());
             }

@@ -38,6 +38,17 @@
         <priority value="WARN" />
     </category>
 
+
+    <category name="javax.mail">
+        <priority value="WARN" />
+    </category>
+
+    <category name="com.sun.mail">
+        <priority value="WARN" />
+    </category>
+
+
+
     <category name="com.klead">
         <priority value="DEBUG" />
     </category>

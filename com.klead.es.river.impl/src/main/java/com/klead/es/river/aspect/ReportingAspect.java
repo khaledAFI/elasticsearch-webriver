@@ -1,6 +1,9 @@
 package com.klead.es.river.aspect;
 
 import com.klead.es.common.AppContext;
+import com.klead.es.common.EsAdminService;
+import com.klead.es.common.RiverMailer;
+import com.klead.es.river.IndexationCommand;
 import com.klead.es.river.IndexationResult;
 import com.klead.es.river.WorkReport;
 import com.klead.es.river.WorkerReport;
@@ -9,6 +12,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;
@@ -22,6 +26,11 @@ public class ReportingAspect {
     private static final Logger LOGGER = Logger.getLogger(ReportingAspect.class);
     private static final String SUCCESS = "SUCCESS";
     private static final String FAILURE = "FAILURE";
+
+    @Autowired
+    private EsAdminService esAdminService;
+    @Autowired
+    private RiverMailer riverMailer ;
 
     @Pointcut("execution(* com.klead.es.river.strategy.IndexationStrategy+.index(..))")
     public void reportingMethod() {
@@ -37,16 +46,18 @@ public class ReportingAspect {
             indexationResult = (IndexationResult) pjp.proceed();
             // get the work report
             WorkReport workReport = AppContext.getApplicationContext().getBean("workReport", WorkReport.class);
-            parseWorkReport(workReport, indexationResult, start);
+            parseWorkReport(workReport, indexationResult, start,(IndexationCommand) pjp.getArgs()[0]);
+            riverMailer.sendPreConfiguredSuccessMail("SUCCESS");
         } catch (Throwable e) {
             LOGGER.error("Error indexation process.", e);
+            riverMailer.sendPreConfiguredFailMail("FAILURE");
         } finally {
             LOGGER.debug("End  indexation process.");
         }
         return indexationResult;
     }
 
-    private void parseWorkReport(WorkReport workReport, IndexationResult indexationResult, long start) {
+    private void parseWorkReport(WorkReport workReport, IndexationResult indexationResult, long start, IndexationCommand command) {
         final Collection<WorkerReport> workerReports = workReport.getReport().values();
         Long totalFailureDocsCount = 0L;
         Long totalSuccessDocsCount = 0L;
@@ -63,6 +74,11 @@ public class ReportingAspect {
         indexationResult.setTotalSuccessDocsCount(totalSuccessDocsCount);
         indexationResult.setTotalFailureDocsCount(totalFailureDocsCount);
         indexationResult.setTotalExecutionTime(System.currentTimeMillis()-start);
+        try {
+            indexationResult.setEsReport( esAdminService.indexStatistics(command.getIndexName()));
+        } catch (Exception e) {
+            LOGGER.error("Error getting Es statistics.", e);
+        }
         indexationResult.setWorkReport(workReport);
     }
 }

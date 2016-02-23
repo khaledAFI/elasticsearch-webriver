@@ -7,5 +7,6 @@ com\klead\es\river\data\reading\IDataReader.class
 com\klead\es\river\WorkReport.class
 com\klead\es\river\WorkerReport.class
 com\klead\es\river\IndexationCommand.class
+com\klead\es\river\EsReport.class
 com\klead\es\river\data\Document.class
 com\klead\es\river\data\indexing\IDocumentIndexer.class

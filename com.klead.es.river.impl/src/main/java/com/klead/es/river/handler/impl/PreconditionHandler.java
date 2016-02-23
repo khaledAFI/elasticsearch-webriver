@@ -32,7 +32,7 @@ public class PreconditionHandler implements IPreconditionHandler {
             checkIndexHealth(command);
         } catch (Exception e) {
             LOGGER.error("PRECONDITIONS check failed !!!. aborting indexation process");
-            throw new TechnicalException(e);
+            throw new TechnicalException(ResultCode.PRECONDITION_ERROR.name(), e);
         }
     }
 
