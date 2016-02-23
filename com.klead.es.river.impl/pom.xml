@@ -31,6 +31,11 @@
             <artifactId>spring-jdbc</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
         </dependency>
@@ -71,7 +76,16 @@
             <artifactId>commons-lang</artifactId>
         </dependency>
 
-
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${commons-collections.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectjrt.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
@@ -82,9 +96,12 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
         </dependency>
+    </dependencies>
 
-        </dependencies>
-
-
+    <properties>
+        <hibernate-validator.version>5.2.3.Final</hibernate-validator.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
+        <aspectjrt.version>1.8.4</aspectjrt.version>
+    </properties>
 
 </project>

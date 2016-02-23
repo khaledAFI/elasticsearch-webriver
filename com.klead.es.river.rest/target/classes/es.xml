@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+                            http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/util
+                            http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <bean id="esClusterClient" class="com.klead.es.common.EsClusterClient" init-method="init" destroy-method="destroy">
+        <property name="elasticSearchNodesPorts" ref="elasticSearchNodesPorts"/>
+        <property name="elasticsearchClusterName" value="my_cluster"/>
+    </bean>
+
+    <util:map id="elasticSearchNodesPorts" map-class="java.util.HashMap">
+        <entry value="10.12.0.111" key="9301"/>
+        <entry value="10.12.0.111" key="9302"/>
+        <entry value="10.12.0.111" key="9303"/>
+    </util:map>
+
+    <bean id="esAdminService" class="com.klead.es.common.EsAdminService">
+        <property name="esClusterClient" ref="esClusterClient"/>
+    </bean>
+
+    <bean id="indexTypeMapping" class="org.apache.commons.io.IOUtils" factory-method="toString">
+        <constructor-arg type="java.io.InputStream" value="classpath:schema.json"/>
+    </bean>
+</beans>

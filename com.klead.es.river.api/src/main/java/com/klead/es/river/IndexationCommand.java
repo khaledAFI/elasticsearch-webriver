@@ -7,19 +7,19 @@ import java.io.Serializable;
  */
 public class IndexationCommand implements Serializable{
 
-    private Integer bulkBlockSize;
+    private Integer indexationPacketSize;
     private String indexName;
     private String indexType;
     private Integer shardNumber;
     private Integer replicaNumber;
     private String routingColumn;
 
-    public Integer getBulkBlockSize() {
-        return bulkBlockSize;
+    public Integer getIndexationPacketSize() {
+        return indexationPacketSize;
     }
 
-    public void setBulkBlockSize(Integer bulkBlockSize) {
-        this.bulkBlockSize = bulkBlockSize;
+    public void setIndexationPacketSize(Integer indexationPacketSize) {
+        this.indexationPacketSize = indexationPacketSize;
     }
 
     public String getIndexName() {

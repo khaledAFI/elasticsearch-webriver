@@ -1,0 +1,1 @@
+UPDATE package SET INDEX_DATE = NOW() WHERE id in (:ids)

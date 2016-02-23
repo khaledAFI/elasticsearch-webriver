@@ -12,11 +12,13 @@ import java.util.Map;
 /**
  * Created by kafi on 08/02/2016.
  */
+
 public class EsClusterClient {
 
     private static final Logger LOGGER = LogManager.getLogger(EsClusterClient.class);
 
     private Map<Integer,String > elasticSearchNodesPorts;
+
     private String elasticsearchClusterName;
     private TransportClient client;
 

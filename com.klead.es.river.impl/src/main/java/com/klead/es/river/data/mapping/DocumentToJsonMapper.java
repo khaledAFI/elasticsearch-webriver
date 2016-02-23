@@ -6,6 +6,7 @@ import com.klead.es.river.data.reading.SqlDataReader;
 import org.apache.log4j.Logger;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.XContentFactory;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -15,7 +16,8 @@ import java.util.List;
 /**
  * Created by kafi on 09/02/2016.
  */
-public class DocumentToJsonMapper implements DocumentMapper {
+@Component("documentToJsonMapper")
+public class DocumentToJsonMapper implements IDocumentMapper {
 
 
     private static Logger LOGGER = Logger.getLogger(SqlDataReader.class);
@@ -26,7 +28,6 @@ public class DocumentToJsonMapper implements DocumentMapper {
         try {
             for (Document doc : docs) {
                 XContentBuilder jsonSejour = XContentFactory.jsonBuilder().prettyPrint();
-
                 Package pack = (Package) doc;
                 jsonSejour.startObject()
                         .field("id").value(pack.getId())
@@ -44,7 +45,6 @@ public class DocumentToJsonMapper implements DocumentMapper {
                         .field("dateMAJ").value(dt.format(pack.getDateMAJ()))
                         .field("coupDeCoeur").value(pack.getCoupDeCoeur())
                         .field("stopAffaire").value(pack.getStopAffaire())
-
                         .endObject();
                 jsons.add(jsonSejour);
             }

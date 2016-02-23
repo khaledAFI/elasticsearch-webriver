@@ -22,4 +22,8 @@ public class WorkReport implements Serializable{
     public void setReport(Map<Long, WorkerReport> report) {
         this.report = report;
     }
+
+    public void init(){
+        this.report =new TreeMap<>();
+    }
 }

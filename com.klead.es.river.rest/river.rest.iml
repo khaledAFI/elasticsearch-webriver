@@ -13,7 +13,11 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="river.api" />
     <orderEntry type="module" module-name="river.impl" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aspects:4.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.7.4" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.27" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.8.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />

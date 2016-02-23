@@ -4,10 +4,12 @@ import com.klead.es.river.IndexationCommand;
 import com.klead.es.river.data.Document;
 import com.klead.es.river.data.Package;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,20 +19,20 @@ import java.util.List;
 /**
  * Created by kafi on 09/02/2016.
  */
-public class SqlDataReader implements DataReader {
+@Repository
+public class SqlDataReader implements IDataReader {
 
     private static Logger LOGGER = Logger.getLogger(SqlDataReader.class);
 
-
+    @Autowired
     private String sqlQuery;
-
+    @Autowired
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
 
     public List<Document> readData(IndexationCommand command) {
-        Long bulkBlockSize = Long.valueOf(command.getBulkBlockSize());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
-        //TODO  add SQL params
+        //TODO  add SQL params if needed
 //        mapSqlParameterSource.addValue("offset", offset);
 //        mapSqlParameterSource.addValue("bulkBlockSize", bulkBlockSize.longValue());
         return namedParameterJdbcTemplate.query(sqlQuery, mapSqlParameterSource, new ResultSetExtractor<List<Document>>() {
@@ -63,11 +65,4 @@ public class SqlDataReader implements DataReader {
 
 
 
-    public void setSqlQuery(String sqlQuery) {
-        this.sqlQuery = sqlQuery;
-    }
-
-    public void setNamedParameterJdbcTemplate(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
-        this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
-    }
 }
