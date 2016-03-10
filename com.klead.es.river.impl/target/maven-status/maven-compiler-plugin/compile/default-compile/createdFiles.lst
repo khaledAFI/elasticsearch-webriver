@@ -2,6 +2,7 @@ com\klead\es\river\data\mapping\DocumentToJsonMapper.class
 com\klead\es\river\worker\MysqlWorker.class
 com\klead\es\river\data\reading\SqlDataReader$1.class
 com\klead\es\river\strategy\impl\FullIndexationStrategy.class
+com\klead\es\river\strategy\LockHolder.class
 com\klead\es\river\exception\BusinessException.class
 com\klead\es\river\handler\impl\CommandValidationHandler.class
 com\klead\es\river\data\reading\SqlDataCounter.class
@@ -11,11 +12,9 @@ com\klead\es\river\data\Package.class
 com\klead\es\river\factory\TaskExecutorFactory.class
 com\klead\es\river\strategy\impl\IndexLockStrategy.class
 com\klead\es\river\exception\TechnicalException.class
-com\klead\es\river\aspect\ReportingAspect.class
 com\klead\es\river\Settings.class
 com\klead\es\common\RiverMailer.class
 com\klead\es\river\data\reading\SqlDataReader.class
-com\klead\es\river\strategy\LockStrategy.class
 com\klead\es\river\handler\impl\PreconditionHandler.class
 com\klead\es\river\handler\IWorkersHandler.class
 com\klead\es\river\factory\WorkerFactory.class
@@ -27,7 +26,7 @@ com\klead\es\river\data\marking\SqlDataMarker.class
 com\klead\es\common\EsAdminService.class
 com\klead\es\river\strategy\IndexationStrategy.class
 com\klead\es\river\MysqlRiver.class
+com\klead\es\river\strategy\ExecutionContext.class
 com\klead\es\common\ApplicationContextProvider.class
-com\klead\es\river\aspect\TransactionalAspect.class
 com\klead\es\river\handler\ICommandValidationHandler.class
 com\klead\es\common\AppContext.class

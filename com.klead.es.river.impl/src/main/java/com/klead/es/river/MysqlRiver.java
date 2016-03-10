@@ -1,5 +1,6 @@
 package com.klead.es.river;
 
+import com.klead.es.river.strategy.ExecutionContext;
 import com.klead.es.river.strategy.IndexationStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MysqlRiver implements IRiver {
+
     @Autowired
     private IndexationStrategy fullIndexationStrategy;
     @Autowired
@@ -17,11 +19,13 @@ public class MysqlRiver implements IRiver {
 
     @Override
     public IndexationResult indexFull(IndexationCommand command) {
-        return fullIndexationStrategy.index(command);
+        ExecutionContext  executionContext = new ExecutionContext(fullIndexationStrategy);
+        return executionContext.executeStrategy(command);
     }
 
     @Override
     public IndexationResult indexDelta(IndexationCommand command) {
-        return deltaIndexationStrategy.index(command);
+        ExecutionContext  executionContext = new ExecutionContext(deltaIndexationStrategy);
+        return executionContext.executeStrategy(command);
     }
 }

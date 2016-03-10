@@ -2,15 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:jee="http://www.springframework.org/schema/jee"
-       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
                             http://www.springframework.org/schema/beans
                             http://www.springframework.org/schema/beans/spring-beans.xsd
                             http://www.springframework.org/schema/jee
                             http://www.springframework.org/schema/jee/spring-jee.xsd
-                            http://www.springframework.org/schema/aop
-                            http://www.springframework.org/schema/aop/spring-aop.xsd
                             http://www.springframework.org/schema/context
 	                        http://www.springframework.org/schema/context/spring-context.xsd">
 
@@ -19,20 +16,6 @@
     <import resource="classpath:mail.xml"/>
 
     <context:component-scan base-package="com.klead.es.river"/>
-
-    <!-- Enable annotation based AOP definitions -->
-    <!-- Instruct Spring to use CGLIB proxies that are actual subclasses of the
-    proxied class otherwise Spring uses JDK dynamic proxies by default which can generate cast exception-->
-    <aop:aspectj-autoproxy proxy-target-class="true">
-        <aop:include name="transactionalAspect"/>
-        <aop:include name="reportingAspect"/>
-    </aop:aspectj-autoproxy>
-
-    <!--<bean id="transactionalAspect" class="com.klead.es.river.aspect.TransactionalAspect">-->
-        <!--<property name="txManager" ref="txManager"/>-->
-    <!--</bean>-->
-
-    <!--<bean id="reportingAspect" class="com.klead.es.river.aspect.ReportingAspect"/>-->
 
     <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/precalculsDataSource"
                      expected-type="javax.sql.DataSource"/>
@@ -58,8 +41,6 @@
     <bean id="dataMarkQuery" class="org.apache.commons.io.IOUtils" factory-method="toString">
         <constructor-arg type="java.io.InputStream" value="classpath:dataMarkQuery.sql"/>
     </bean>
-
-    <bean id="workReport" class="com.klead.es.river.WorkReport"/>
 
     <bean id="contextApplicationContextProvider" class="com.klead.es.common.ApplicationContextProvider"/>
 

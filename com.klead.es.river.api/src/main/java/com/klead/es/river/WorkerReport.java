@@ -1,16 +1,25 @@
 package com.klead.es.river;
 
+import com.klead.es.river.builder.WorkerReportBuilder;
+
 import java.io.Serializable;
 
 /**
  * Created by kafi on 12/02/2016.
  */
-public class WorkerReport  implements Serializable{
+public class WorkerReport implements Serializable {
     private Long id;
     private Long docsCount;
     private String status;
     private Long workerExecutionTime;
 
+
+    public WorkerReport(WorkerReportBuilder builder) {
+        this.id = builder.getId();
+        this.docsCount = builder.getDocsCount();
+        this.status = builder.getStatus();
+        this.workerExecutionTime = builder.getWorkerExecutionTime();
+    }
 
     public Long getId() {
         return id;
@@ -43,4 +52,6 @@ public class WorkerReport  implements Serializable{
     public void setWorkerExecutionTime(Long workerExecutionTime) {
         this.workerExecutionTime = workerExecutionTime;
     }
+
+
 }
