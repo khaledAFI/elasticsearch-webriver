@@ -9,5 +9,6 @@ import java.util.List;
  * Created by kafi on 09/02/2016.
  */
 public interface IDataReader {
-    List<Document> readData(IndexationCommand command);
+    List<Document> readFullData(IndexationCommand command);
+    List<Document> readDeltaData(IndexationCommand command);
 }

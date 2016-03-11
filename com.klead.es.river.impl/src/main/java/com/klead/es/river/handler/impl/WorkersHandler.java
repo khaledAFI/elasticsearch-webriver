@@ -5,8 +5,6 @@ import com.klead.es.common.RiverMailer;
 import com.klead.es.river.*;
 import com.klead.es.river.data.Document;
 import com.klead.es.river.data.Status;
-import com.klead.es.river.data.reading.SqlDataCounter;
-import com.klead.es.river.data.reading.SqlDataReader;
 import com.klead.es.river.factory.TaskExecutorFactory;
 import com.klead.es.river.factory.WorkerFactory;
 import com.klead.es.river.handler.IWorkersHandler;
@@ -34,10 +32,7 @@ public class WorkersHandler  implements IWorkersHandler {
     private String additionalPoolSize;
     @Value("${queueCapacity}")
     private String queueCapacity;
-    @Autowired
-    private SqlDataCounter sqlDataCounter;
-    @Autowired
-    private SqlDataReader sqlDataReader;
+
     @Autowired
     private WorkerFactory workerFactory;
     @Autowired
@@ -48,25 +43,22 @@ public class WorkersHandler  implements IWorkersHandler {
     private RiverMailer riverMailer;
 
     @Override
-    public IndexationResult runWorkers(final IndexationCommand command) {
+    public IndexationResult runWorkers(final IndexationCommand command, final List<Document> data) {
         long start = System.currentTimeMillis();
         IndexationResult indexationResult = new IndexationResult();
         try {
             Integer bulkBlockSize = Integer.valueOf(command.getIndexationPacketSize());
             int fromIndex = 0;
-            int numberOfDocs = sqlDataCounter.countNumberOfDocs();
+            int numberOfDocs = data.size();
             int numberOfWorkers = (numberOfDocs / bulkBlockSize.intValue()) + 1;
             LOGGER.info("NUMBER OF WORKERS : " + numberOfWorkers);
             indexationResult.setWorkersNumber(numberOfWorkers);
             indexationResult.setTotalDocsCount(Long.valueOf(numberOfDocs));
 
-            // get data to index
-            List<Document> data = sqlDataReader.readData(command);
-
             // Prepare a new taskExecutor thread pool
             ThreadPoolTaskExecutor taskExecutor = taskExecutorFactory.getTaskExecutor(numberOfWorkers, numberOfWorkers + Integer.valueOf(additionalPoolSize), Integer.valueOf(queueCapacity));
             //create a list to hold the Future object associated with Callable
-            List<Future<WorkerReport>> list = new ArrayList<Future<WorkerReport>>();
+            List<Future<WorkerReport>> list = new ArrayList();
             // process blocks of data with dedicated worker
             for (int i = 0; i < numberOfWorkers; i++) {
                 int toIndex = fromIndex + bulkBlockSize > numberOfDocs ? numberOfDocs : fromIndex + bulkBlockSize;

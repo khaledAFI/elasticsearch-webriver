@@ -3,62 +3,28 @@ package com.klead.es.river.strategy.impl;
 import com.klead.es.river.IndexationCommand;
 import com.klead.es.river.IndexationResult;
 import com.klead.es.river.ResultCode;
-import com.klead.es.river.exception.BusinessException;
-import com.klead.es.river.exception.TechnicalException;
-import com.klead.es.river.handler.ICommandValidationHandler;
-import com.klead.es.river.handler.IPreconditionHandler;
-import com.klead.es.river.handler.IWorkersHandler;
+import com.klead.es.river.data.Document;
 import com.klead.es.river.strategy.IndexationStrategy;
-import com.klead.es.river.LockHolder;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * Created by kafi on 16/02/2016.
  */
 @Component
-public class FullIndexationStrategy implements IndexationStrategy {
-    @Value("${tryLockAcquiringTimeout}")
-    private  String  tryLockAcquiringTimeout ;
-    @Autowired
-    private ICommandValidationHandler commandValidationHandler;
-    @Autowired
-    private IPreconditionHandler preconditionHandler;
-    @Autowired
-    private IWorkersHandler workersHandler;
-    @Autowired
-    private LockHolder indexLockHolder;
+public class FullIndexationStrategy extends IndexationStrategy {
 
 
     @Override
-    public IndexationResult index(IndexationCommand command) {
-        IndexationResult indexationResult = new IndexationResult();
-        // check parameters at first
-        try {
-            commandValidationHandler.validate(command);
-        } catch (BusinessException be) {
-            indexationResult.setResultCode(be.getMessage());
+    protected IndexationResult proceed(IndexationCommand command) {
+        // get data to index
+        List<Document> data = sqlDataReader.readFullData(command);
+        if (data.size()==0) {
+            IndexationResult indexationResult = new IndexationResult();
+            indexationResult.setResultCode(ResultCode.NO_DATA_TO_INDEX.name());
             return indexationResult;
         }
-        // check preconditions before performing indexation
-        try {
-            // check Lock
-            if (indexLockHolder.tryLock(command, Long.valueOf(tryLockAcquiringTimeout))) {
-                try {
-                    preconditionHandler.checkPreconditions(command);
-                    // Run indexing Workers
-                    indexationResult = workersHandler.runWorkers(command);
-                }finally {
-                    indexLockHolder.tryUnlock(command);
-                }
-            } else {
-                indexationResult.setResultCode(ResultCode.INDEXATION_ALREADY_RUNNING.name());
-            }
-
-        } catch (TechnicalException te) {
-            indexationResult.setResultCode(te.getMessage());
-        }
-        return indexationResult;
+        return  workersHandler.runWorkers(command, data);
     }
 }

@@ -1,6 +1,6 @@
 package com.klead.es.river;
 
-import com.klead.es.river.strategy.ExecutionContext;
+import com.klead.es.river.strategy.impl.ExecutionContext;
 import com.klead.es.river.strategy.IndexationStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

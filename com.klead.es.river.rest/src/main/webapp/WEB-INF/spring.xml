@@ -31,13 +31,12 @@
         <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>
 
-    <bean id="sqlQuery" class="org.apache.commons.io.IOUtils" factory-method="toString">
-        <constructor-arg type="java.io.InputStream" value="classpath:sqlQuery.sql"/>
+    <bean id="fullDataQuery" class="org.apache.commons.io.IOUtils" factory-method="toString">
+        <constructor-arg type="java.io.InputStream" value="classpath:fullDataQuery.sql"/>
     </bean>
-    <bean id="dataCountQuery" class="org.apache.commons.io.IOUtils" factory-method="toString">
-        <constructor-arg type="java.io.InputStream" value="classpath:dataCountQuery.sql"/>
+    <bean id="deltaDataQuery" class="org.apache.commons.io.IOUtils" factory-method="toString">
+        <constructor-arg type="java.io.InputStream" value="classpath:deltaDataQuery.sql"/>
     </bean>
-
     <bean id="dataMarkQuery" class="org.apache.commons.io.IOUtils" factory-method="toString">
         <constructor-arg type="java.io.InputStream" value="classpath:dataMarkQuery.sql"/>
     </bean>

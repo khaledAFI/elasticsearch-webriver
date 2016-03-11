@@ -25,17 +25,48 @@ public class SqlDataReader implements IDataReader {
     private static Logger LOGGER = Logger.getLogger(SqlDataReader.class);
 
     @Autowired
-    private String sqlQuery;
+    private String fullDataQuery;
+    @Autowired
+    private String deltaDataQuery;
     @Autowired
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
 
-    public List<Document> readData(IndexationCommand command) {
+    public List<Document> readFullData(IndexationCommand command) {
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
-        //TODO  add SQL params if needed
-//        mapSqlParameterSource.addValue("offset", offset);
-//        mapSqlParameterSource.addValue("bulkBlockSize", bulkBlockSize.longValue());
-        return namedParameterJdbcTemplate.query(sqlQuery, mapSqlParameterSource, new ResultSetExtractor<List<Document>>() {
+        return namedParameterJdbcTemplate.query(fullDataQuery, mapSqlParameterSource, new ResultSetExtractor<List<Document>>() {
+                    public List<Document> extractData(ResultSet resultSet) throws SQLException, DataAccessException {
+                        List<Document> docs = new ArrayList<>();
+                        while (resultSet.next()) {
+                            Package doc = new Package();
+                            doc.setId(resultSet.getLong("ID"));
+                            doc.setIdLogement(resultSet.getInt("RID_LOGEMENT"));
+                            doc.setDureeJours(resultSet.getInt("DUREE_JOUR"));
+                            doc.setDureeNuits(resultSet.getInt("DUREE_NUIT"));
+                            doc.setVilleDepart(resultSet.getString("VILLE_DEPART"));
+                            doc.setPension(resultSet.getString("REF_PENSION"));
+                            doc.setPrix(resultSet.getLong("PRIX"));
+                            doc.setPrixj30(resultSet.getLong("PRIX_J30"));
+                            doc.setDispo(resultSet.getInt("DISPO"));
+                            doc.setOffreCompleteId(resultSet.getLong("OFFRE_COMPLETE_ID"));
+                            doc.setCoupDeCoeur(resultSet.getBoolean("IS_COUP_DE_COEUR"));
+                            doc.setStopAffaire(resultSet.getBoolean("STOP_AFFAIRE"));
+                            doc.setRidTourOperateur(resultSet.getInt("RID_TOUROPERATEUR"));
+                            doc.setDateCreation(resultSet.getDate("CREATE_DATE"));
+                            doc.setDateMAJ(resultSet.getDate("UPDATE_DATE"));
+                            docs.add(doc);
+                        }
+                        return docs;
+                    }
+                }
+        );
+    }
+
+    public List<Document> readDeltaData(IndexationCommand command) {
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+        mapSqlParameterSource.addValue("startDeltaTimestamp", command.getStartDeltaTimestamp());
+        mapSqlParameterSource.addValue("endDeltaTimestamp", command.getEndDeltaTimestamp());
+        return namedParameterJdbcTemplate.query(deltaDataQuery, mapSqlParameterSource, new ResultSetExtractor<List<Document>>() {
                     public List<Document> extractData(ResultSet resultSet) throws SQLException, DataAccessException {
                         List<Document> docs = new ArrayList<>();
                         while (resultSet.next()) {

@@ -3,6 +3,7 @@ D:\dev\projects\elasticsearch-webriver\com.klead.es.river.api\src\main\java\com\
 D:\dev\projects\elasticsearch-webriver\com.klead.es.river.api\src\main\java\com\klead\es\river\IndexationCommand.java
 D:\dev\projects\elasticsearch-webriver\com.klead.es.river.api\src\main\java\com\klead\es\river\WorkerReport.java
 D:\dev\projects\elasticsearch-webriver\com.klead.es.river.api\src\main\java\com\klead\es\river\data\Document.java
+D:\dev\projects\elasticsearch-webriver\com.klead.es.river.api\src\main\java\com\klead\es\river\data\Status.java
 D:\dev\projects\elasticsearch-webriver\com.klead.es.river.api\src\main\java\com\klead\es\river\IndexationStatus.java
 D:\dev\projects\elasticsearch-webriver\com.klead.es.river.api\src\main\java\com\klead\es\river\WorkReport.java
 D:\dev\projects\elasticsearch-webriver\com.klead.es.river.api\src\main\java\com\klead\es\river\IRiver.java

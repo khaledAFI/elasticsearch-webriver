@@ -1,8 +1,7 @@
-package com.klead.es.river.strategy.impl;
+package com.klead.es.river.handler.impl;
 
 import com.klead.es.river.IndexationCommand;
-import com.klead.es.river.handler.impl.PreconditionHandler;
-import com.klead.es.river.LockHolder;
+import com.klead.es.river.handler.ILockHandler;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
@@ -18,8 +17,8 @@ import java.util.concurrent.locks.ReentrantLock;
  * Created by kafi on 23/02/2016.
  *
  */
-@Component("indexLockStrategy")
-public class IndexLockStrategy implements LockHolder {
+@Component("lockHandler")
+public class LockHandler implements ILockHandler {
     private static final Logger LOGGER = Logger.getLogger(PreconditionHandler.class);
 
     private Map<String, Lock> mLocks = new HashMap<>();

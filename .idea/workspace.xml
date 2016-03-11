@@ -2,43 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfe15afc-8bbb-4aa0-b0c1-b6f4c71f6301" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/builder/WorkerReportBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/data/Status.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/ExecutionContext.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/aspect/ReportingAspect.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/aspect/TransactionalAspect.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/aspect/ReportingAspect.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/aspect/TransactionalAspect.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/LockStrategy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.rest/target/tomcat/logs/access_log.2016-02-23" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.api/target/classes/com/klead/es/river/WorkReport.class" afterPath="$PROJECT_DIR$/com.klead.es.river.api/target/classes/com/klead/es/river/WorkReport.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.api/target/classes/com/klead/es/river/WorkerReport.class" afterPath="$PROJECT_DIR$/com.klead.es.river.api/target/classes/com/klead/es/river/WorkerReport.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/data/reading/SqlDataCounter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/data/reading/SqlDataCounter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/ExecutionContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/LockHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/impl/IndexLockStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/dataCountQuery.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/sqlQuery.sql" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.api/target/classes/com/klead/es/river/IndexationCommand.class" afterPath="$PROJECT_DIR$/com.klead.es.river.api/target/classes/com/klead/es/river/IndexationCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.api/target/classes/com/klead/es/river/data/reading/IDataReader.class" afterPath="$PROJECT_DIR$/com.klead.es.river.api/target/classes/com/klead/es/river/data/reading/IDataReader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/MysqlRiver.class" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/MysqlRiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/Settings.class" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/Settings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/data/reading/SqlDataReader$1.class" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/data/reading/SqlDataReader$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/data/reading/SqlDataReader.class" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/data/reading/SqlDataReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/handler/IWorkersHandler.class" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/handler/IWorkersHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/handler/impl/WorkersHandler.class" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/handler/impl/WorkersHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/IndexationStrategy.class" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/IndexationStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/impl/DeltaIndexationStrategy.class" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/impl/DeltaIndexationStrategy.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/impl/FullIndexationStrategy.class" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/impl/FullIndexationStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/impl/IndexLockStrategy.class" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/strategy/impl/IndexLockStrategy.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/worker/MysqlWorker.class" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/classes/com/klead/es/river/worker/MysqlWorker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.rest/target/tomcat/logs/access_log.2016-03-10" afterPath="$PROJECT_DIR$/com.klead.es.river.rest/target/tomcat/logs/access_log.2016-03-10" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/WorkReport.java" afterPath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/WorkReport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/WorkerReport.java" afterPath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/WorkerReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/IndexationCommand.java" afterPath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/IndexationCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/ResultCode.java" afterPath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/ResultCode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/data/reading/IDataReader.java" afterPath="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/data/reading/IDataReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/com.klead.es.river.api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/com.klead.es.river.api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/MysqlRiver.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/MysqlRiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/Settings.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/Settings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/data/reading/SqlDataReader.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/data/reading/SqlDataReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/IWorkersHandler.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/IWorkersHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/WorkersHandler.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/WorkersHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/IndexationStrategy.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/IndexationStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/DeltaIndexationStrategy.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/DeltaIndexationStrategy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/FullIndexationStrategy.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/FullIndexationStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/IndexLockStrategy.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/IndexLockStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/worker/MysqlWorker.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/worker/MysqlWorker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.rest/src/main/webapp/WEB-INF/spring.xml" afterPath="$PROJECT_DIR$/com.klead.es.river.rest/src/main/webapp/WEB-INF/spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.rest/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/com.klead.es.river.rest/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.rest/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/com.klead.es.river.rest/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.rest/target/tomcat/conf/logging.properties" afterPath="$PROJECT_DIR$/com.klead.es.river.rest/target/tomcat/conf/logging.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.rest/target/tomcat/conf/tomcat-users.xml" afterPath="$PROJECT_DIR$/com.klead.es.river.rest/target/tomcat/conf/tomcat-users.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.klead.es.river.rest/target/tomcat/conf/web.xml" afterPath="$PROJECT_DIR$/com.klead.es.river.rest/target/tomcat/conf/web.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/LockStrategy.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/LockHolder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/LockHolder.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/ILockHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/ExecutionContext.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/ExecutionContext.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/IndexLockStrategy.java" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/LockHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/resources/dataCountQuery.sql" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/resources/fullDataQuery.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/resources/sqlQuery.sql" afterPath="$PROJECT_DIR$/com.klead.es.river.impl/src/main/resources/deltaDataQuery.sql" />
     </list>
     <ignored path="com.klead.es.river.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,87 +66,14 @@
     <favorites_list name="com.klead.es.river" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MysqlWorker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/worker/MysqlWorker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MysqlRiver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/MysqlRiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FullIndexationStrategy.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/FullIndexationStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8794326">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WorkersHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/WorkersHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-              <folding>
-                <element signature="e#2870#2892#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Settings.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/Settings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LockHolder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/LockHolder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskExecutorFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/factory/TaskExecutorFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="126" selection-start-line="13" selection-start-column="114" selection-end-line="13" selection-end-column="126" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -159,18 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/IPreconditionHandler.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/IWorkersHandler.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/factory/TaskExecutorFactory.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/ICommandValidationHandler.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/CommandValidationHandler.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/aspect/ExceptionAspect.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/data/marking/SqlDataMarker.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/data/indexing/IDocumentIndexer.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/data/indexing/DocumentBulkIndexer.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/data/mapping/DocumentToJsonMapper.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.rest/src/main/java/com/klead/es/river/rest/RiverRest.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/WorkersHandler.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.rest/src/main/webapp/WEB-INF/rest.xml" />
         <option value="$PROJECT_DIR$/com.klead.es.river.rest/src/main/resources/es.xml" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/aspect/TransactionAspect.java" />
@@ -181,12 +99,9 @@
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/LockStrategy.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/FullIndexationStrategy.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/IndexLockStrategy.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/IndexationStrategy.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/aspect/TransactionalAspect.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/IndexationResult.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/ResultCode.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/PreconditionHandler.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/IndexLockStrategy.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/EsReport.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/common/EsAdminService.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/resources/river.properties" />
@@ -199,16 +114,31 @@
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/ExecutionContext.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/MysqlRiver.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/aspect/ReportingAspect.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.rest/src/main/webapp/WEB-INF/spring.xml" />
         <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/WorkReport.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/builder/WorkerReportBuilder.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/WorkerReport.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/builder/WorkerReportBuilder.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/data/Status.java" />
-        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/WorkersHandler.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/Settings.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/LockHolder.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/worker/MysqlWorker.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/builder/WorkReportBuilder.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/IndexLockStrategy.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/LockHandler.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/IndexLockStrategy.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/LockHandler.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/ExecutionContext.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/IIndexationStrategy.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/IndexationStrategy.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/IWorkersHandler.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/data/reading/IDataReader.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/IndexationCommand.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/data/reading/SqlDataReader.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/resources/deltaDataQuery.sql" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.rest/src/main/webapp/WEB-INF/spring.xml" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/ResultCode.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/WorkersHandler.java" />
+        <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/DeltaIndexationStrategy.java" />
         <option value="$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/FullIndexationStrategy.java" />
       </list>
     </option>
@@ -461,32 +391,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.klead.es.river" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elasticsearch-webriver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.klead.es.river.impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -684,6 +588,86 @@
               <option name="myItemId" value="es" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="river" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.klead.es.river" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elasticsearch-webriver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.klead.es.river.impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="es" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="river" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.klead.es.river" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elasticsearch-webriver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.klead.es.river.impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="es" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -763,40 +747,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.klead.es.river" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elasticsearch-webriver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.klead.es.river.api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="river" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -812,15 +762,18 @@
     <property name="extract.method.default.visibility" value="public" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev\projects\elasticsearch-webriver\com.klead.es.river.impl\src\main\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.klead.es.river.data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\dev\projects\elasticsearch-webriver\com.klead.es.river.impl\src\main\java\com\klead\es\river\strategy\impl" />
+      <recent name="D:\dev\projects\elasticsearch-webriver\com.klead.es.river.impl\src\main\java\com\klead\es\river\handler\impl" />
+      <recent name="D:\dev\projects\elasticsearch-webriver\com.klead.es.river.impl\src\main\java\com\klead\es\river\handler" />
       <recent name="D:\dev\projects\elasticsearch-webriver\com.klead.es.river.impl\src\main\java\com\klead\es\river" />
       <recent name="D:\dev\projects\elasticsearch-webriver\com.klead.es.river.api\src\main\java\com\klead\es\river" />
-      <recent name="C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.rest\src\main\resources" />
-      <recent name="C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.impl\src\main\resources" />
-      <recent name="C:\Users\kafi\IdeaProjects\com.klead.es.river\com.klead.es.river.rest\src\main\webapp\META-INF" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.tomcat7">
@@ -1231,31 +1184,55 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1928" height="1176" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37452108" sideWeight="0.50214136" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16283526" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23554604" sideWeight="0.49616858" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10760171" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24732333" sideWeight="0.50383145" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6436782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69827586" sideWeight="0.49785867" order="4" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37452108" sideWeight="0.50214136" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6436782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23554604" sideWeight="0.49616858" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10760171" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24732333" sideWeight="0.50383145" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69827586" sideWeight="0.49785867" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1279,55 +1256,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-core/4.0.5.RELEASE/spring-core-4.0.5.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.554">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/elasticsearch/elasticsearch/1.7.4/elasticsearch-1.7.4.jar!/org/elasticsearch/ElasticsearchException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.204">
-          <caret line="19" column="60" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/elasticsearch/elasticsearch/1.7.4/elasticsearch-1.7.4.jar!/org/elasticsearch/ElasticsearchTimeoutException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.204">
-          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/common/EsClusterClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../jvm/Java7-u79/src.zip!/java/lang/RuntimeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5019685">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/data/mapping/DocumentToJsonMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/aspectj/aspectjweaver/1.7.4/aspectjweaver-1.7.4.jar!/org/aspectj/lang/ProceedingJoinPoint.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15470172">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-tx/4.0.5.RELEASE/spring-tx-4.0.5.RELEASE.jar!/org/springframework/transaction/config/spring-tx-3.2.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3493014">
@@ -1357,17 +1285,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/resources/sqlQuery.sql">
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/resources/fullDataQuery.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../jvm/Java7-u79/src.zip!/java/util/concurrent/locks/Lock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5147638">
-          <caret line="333" column="9" selection-start-line="333" selection-start-column="9" selection-end-line="333" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1399,24 +1320,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/ResultCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/PreconditionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/IndexLockStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1466,7 +1373,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25757575">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1499,49 +1405,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/DeltaIndexationStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/ExecutionContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11712598">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#321#322#0" expanded="false" />
-            <element signature="e#381#382#0" expanded="false" />
-            <element signature="e#454#455#0" expanded="false" />
-            <element signature="e#510#511#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/IndexationStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11712598">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/IWorkersHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15059055">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../jvm/Java7-u79/src.zip!/java/util/concurrent/Future.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58169293">
           <caret line="150" column="6" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1549,7 +1416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.50911456">
           <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1557,7 +1423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.2010796">
           <caret line="111" column="35" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1565,7 +1430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1573,25 +1437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18085106">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.rest/src/main/webapp/WEB-INF/spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60121953">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/WorkReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3617021">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1607,17 +1452,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.120567374">
           <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/WorkersHandler.java">
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/ILockHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-          <folding>
-            <element signature="e#2870#2892#0" expanded="true" />
-          </folding>
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1625,46 +1466,167 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/LockHolder.java">
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/WorkReport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.18085106">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/factory/TaskExecutorFactory.java">
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/ExecutionContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="126" selection-start-line="13" selection-start-column="114" selection-end-line="13" selection-end-column="126" />
-          <folding />
+        <state vertical-scroll-proportion="0.32380953">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/worker/MysqlWorker.java">
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/IWorkersHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-          <folding />
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/data/reading/IDataReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/IndexationStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="71" selection-start-line="34" selection-start-column="71" selection-end-line="34" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/data/reading/SqlDataReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58169293">
+          <caret line="79" column="67" selection-start-line="79" selection-start-column="67" selection-end-line="79" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/resources/dataMarkQuery.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/data/marking/SqlDataMarker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24028268">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/resources/deltaDataQuery.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.rest/src/main/webapp/WEB-INF/spring.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37037036">
+          <caret line="33" column="93" selection-start-line="33" selection-start-column="93" selection-end-line="33" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/IndexationCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6007067">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/MysqlRiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.5106007">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.api/src/main/java/com/klead/es/river/ResultCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60714287">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/WorkersHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15178572">
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../jvm/Java7-u79/src.zip!/java/util/concurrent/locks/Lock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.382874">
+          <caret line="165" column="17" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../jvm/Java7-u79/src.zip!/java/util/concurrent/locks/ReentrantLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58562994">
+          <caret line="70" column="2" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/handler/impl/LockHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.90255904">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/worker/MysqlWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45177165">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/factory/TaskExecutorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3011811">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/DeltaIndexationStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31791338">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com.klead.es.river.impl/src/main/java/com/klead/es/river/strategy/impl/FullIndexationStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8794326">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.23425196">
+          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
           <folding />
         </state>
       </provider>

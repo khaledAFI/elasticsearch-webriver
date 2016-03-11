@@ -1,12 +1,13 @@
 com\klead\es\river\data\mapping\IDocumentMapper.class
 com\klead\es\river\IndexationResult.class
+com\klead\es\river\data\Status.class
 com\klead\es\river\EsReport.class
 com\klead\es\river\builder\WorkerReportBuilder.class
 com\klead\es\river\data\Document.class
 com\klead\es\river\data\indexing\IDocumentIndexer.class
 com\klead\es\river\IndexationStatus.class
-com\klead\es\river\IRiver.class
 com\klead\es\river\ResultCode.class
+com\klead\es\river\IRiver.class
 com\klead\es\river\data\marking\IDataMarker.class
 com\klead\es\river\data\reading\IDataReader.class
 com\klead\es\river\WorkReport.class

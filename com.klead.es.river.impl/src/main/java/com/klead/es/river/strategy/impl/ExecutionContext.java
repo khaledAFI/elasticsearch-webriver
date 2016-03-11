@@ -1,7 +1,8 @@
-package com.klead.es.river.strategy;
+package com.klead.es.river.strategy.impl;
 
 import com.klead.es.river.IndexationCommand;
 import com.klead.es.river.IndexationResult;
+import com.klead.es.river.strategy.IndexationStrategy;
 
 /**
  * Created by kafi on 10/03/2016.

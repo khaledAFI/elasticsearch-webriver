@@ -1,6 +1,7 @@
 package com.klead.es.river;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by kafi on 08/02/2016.
@@ -13,6 +14,8 @@ public class IndexationCommand implements Serializable{
     private Integer shardNumber;
     private Integer replicaNumber;
     private String routingColumn;
+    private Date startDeltaTimestamp;
+    private Date endDeltaTimestamp;
 
     public Integer getIndexationPacketSize() {
         return indexationPacketSize;
@@ -62,4 +65,19 @@ public class IndexationCommand implements Serializable{
         this.routingColumn = routingColumn;
     }
 
+    public Date getStartDeltaTimestamp() {
+        return startDeltaTimestamp;
+    }
+
+    public void setStartDeltaTimestamp(Date startDeltaTimestamp) {
+        this.startDeltaTimestamp = startDeltaTimestamp;
+    }
+
+    public Date getEndDeltaTimestamp() {
+        return endDeltaTimestamp;
+    }
+
+    public void setEndDeltaTimestamp(Date endDeltaTimestamp) {
+        this.endDeltaTimestamp = endDeltaTimestamp;
+    }
 }
